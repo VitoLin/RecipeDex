@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dev Plan</title>
+	</head>
+	<body>
+		<h4>
+			The relational schema of your database. Remember to include all keys
+			and dependencies (e.g., functional dependencies) as appropriate.
+		</h4>
+		recipes(recipe_id, directions, name) S= { recipe_id -> directions, name}
+		<br />
+		ingredients(ingredient_id, quantity, recipe_id) S= {ingredient_id,
+		recipe_id -> name, quantity}
+		<br />
+		nutrition(ingredient_id, quantity, micro_nutrients, macro_nutrients) S=
+		{ingredient_id -> quantity, micronutrients, macronutrients}
+		<br />
+		accounts(user_id, favorites, password) S= {user_id -> favorites,
+		password}
+		<br />
+		favorites(recipe_id, user_id) S= {user_id -> recipe_id}
+
+		<h4>
+			Describe the final choice of databases and software
+			platforms/languages that you will be using, especially if there are
+			different from the default tools on db.cse.nd.edu.
+		</h4>
+		Backend: default LAMP stack Frontend: HTML, CSS, Javascript, Bootstrap
+		Python for cleaning the dataset and standardizing multiple sets
+		<h4>
+			Describe where and how you will get data for your application. Do
+			you get it from the Web, some other application, or do you make it
+			up?
+		</h4>
+
+		Data taken from 2 data sets from the Web
+		<br />
+		<a
+			href="https://www.kaggle.com/shuyangli94/food-com-recipes-and-user-interactions?select=PP_recipes.csv"
+			>https://www.kaggle.com/shuyangli94/food-com-recipes-and-user-interactions?select=PP_recipes.csv</a
+		>
+		<br />
+		has nutrition values but no ingredients list, just directions about
+		180,000 recipes
+		<br />
+		<a
+			href="https://www.kaggle.com/pes12017000148/food-ingredients-and-recipe-dataset-with-images"
+			>https://www.kaggle.com/pes12017000148/food-ingredients-and-recipe-dataset-with-images</a
+		>
+		<br />
+		has ingredients but no nutrition about 13,500 recipes
+		<br />
+		<a href="https://fdc.nal.usda.gov/">https://fdc.nal.usda.gov/</a>
+		<br />For nutrition information
+
+		<h3>Describe the labor division among group members.</h3>
+		<ul>
+			<li>Vito - cleaning up the datasets to be inputted into MySQL</li>
+			<li>Coleen - backend</li>
+			<li>Austin - mostly front end (HTML, CSS, Javascript)</li>
+			<li>Sam - Backend and front end data processing</li>
+		</ul>
+
+		<h3>A project timeline with milestones.</h3>
+
+		<ul>
+			<li>
+				Now until break - mostly focus on getting datasets cleaned and
+				onto MySQL, learn about the tools we will use in our final
+				project (bootstrap, apache, and php). Also research ways to
+				store recipe information in an optimal way
+			</li>
+			<li>
+				October 16th - Have base dataset entered into MySQL, recipe set
+				from kaggle focusing on recipes and not so much ingredients
+			</li>
+			<li>
+				October 17-18th - basic backend functions with insertion,
+				deletion, and basic search functions created
+			</li>
+			<li>
+				October 19th -22nd - front end created without much styling and
+				interfacing with simple backend
+			</li>
+			<li>
+				October 23rd-29th - Hammering out errors and bugs for Initial
+				Demo
+			</li>
+			<li>
+				November 1st -30th - Work on advanced functions, making the
+				website look better with bootstrap and styling, debugging and
+				improving on the initial demo
+			</li>
+			<li>December 1st - Due Date - debugging and testing</li>
+		</ul>
+	</body>
+</html>
